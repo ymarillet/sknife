@@ -1,0 +1,95 @@
+{% if('lib_css' in datatable.type) %}
+    {% stylesheets filter="cssrewrite" output="js/compiled/datatables.css"
+        'bundles/sknife/js/jQuery/plugins/datatables/css/jquery.dataTables-1.9.4.css'
+    %}
+    <link type="text/css" href="{{ asset_url }}" rel="stylesheet" />
+    {% endstylesheets %}
+{% endif %}
+
+{% if('lib_js' in datatable.type) %}
+    {% javascripts output="js/compiled/datatables.js"
+        'bundles/sknife/js/jQuery/plugins/datatables/jquery.dataTables-1.9.4.min.js'
+        'bundles/sknife/js/jQuery/plugins/datatables/plugins/pagination.boostrap.js'
+        'bundles/sknife/js/jQuery/plugins/datatables/plugins/columnfilter.select.js'
+        'bundles/sknife/js/jQuery/plugins/datatables/plugins/fnSetFilteringDelay.js'
+        'bundles/sknife/js/jQuery/plugins/datatables/plugins/grouped-actions.js'
+        'bundles/sknife/js/init.datatable.js'
+    %}
+    <script type="text/javascript" src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+{% endif %}
+
+{% if 'html' in datatable.type %}
+    <table id="{{ datatable.id }}">
+        <thead>
+            <tr class="filters-container">
+                {% for i in datatable.columns %}
+                    <td
+                    {% if i is iterable %}
+                        {% if i.groupedActions is not defined %}
+                            {% if i.selectable is defined and i.selectable %}
+                                data-selectable="true"
+                            {% elseif i.filterable is defined %}
+                                data-filterable="{% if i.filterable is iterable or i.filterable %}true{% else %}false{% endif %}"
+                                {% if i.filterable is iterable and i.filterable is not empty %}
+                                    data-filterable-items="{{ i.filterable|json_encode|escape('html_attr')|raw }}"
+                                {% endif %}
+                            {% endif %}
+
+                            {% if i.value is defined %}
+                                data-value="{{ i.value|escape('html_attr') }}"
+                            {% endif %}
+                        {% endif %}
+                    {% endif %}
+                        ></td>
+                {% endfor %}
+            </tr>
+            <tr>
+            {% for i in datatable.columns %}
+                <th class="table_nowrap" style="{% if i['maxWidth'] is defined %}max-width: {{ i['maxWidth'] }};{% endif %}
+                                                {% if i['minWidth'] is defined %}min-width: {{ i['minWidth'] }};{% endif %}">
+                    {% if i is iterable %}
+                        {% if i.groupedActions is defined %}
+                            <input type="checkbox" id="{{ datatable.id }}_all" value="1" data-target="{{ i.groupedActions }}" />
+                        {% else %}
+                            {{ i.name }}
+                        {% endif %}
+                    {% else %}
+                        {{ i }}
+                    {% endif %}
+                </th>
+            {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+        {% for row in datatable.data %}
+            <tr>
+            {% for i in row %}
+                <td>{{ i|raw }}</td>
+            {% endfor %}
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endif %}
+
+{% if 'js' in datatable.type %}
+    <script type="text/javascript">
+        $(function() {
+            var $customOptions = {};
+            {% if datatable.customOptions is defined %}
+                $customOptions = {{ datatable.customOptions|json_encode|raw }};
+            {% endif %}
+            {{ sknifeVar|default('sknife') }}.initDatatable('#{{ datatable.id }}',
+                    {{ datatable.aoColumns|json_encode|raw }},
+                    "{{ asset('bundles/sknife/js/jQuery/plugins/datatables/i18n/dataTables.' ~ app.request.locale ~ '.json') }}",
+                    $customOptions,
+                    {{ ( datatable.groupedActions | default({}) )|json_encode|raw }}
+            );
+        });
+
+        function {{ datatable.id }}_redraw() {
+           $('#{{ datatable.id }}').dataTable().fnDraw(false);
+        }
+    </script>
+{% endif %}

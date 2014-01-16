@@ -1,0 +1,12 @@
+{% block sknife_bootstrap_switch_widget %}
+    <div class="make-switch {{ form.vars.sizeClass }} {{ form.vars.add_classes }}"
+        style="min-width: {{ form.vars.min_width }}; {{ form.vars.add_styles }}"
+        data-on="{{ form.vars.on_color }}"
+        data-off="{{ form.vars.off_color }}"
+        data-on-label="{{ form.vars.on_label }}"
+        data-off-label="{{ form.vars.off_label }}"
+        {{ block('widget_container_attributes') }}
+        >
+            {{ form_widget(form) }}
+    </div>
+{% endblock sknife_bootstrap_switch_widget %}

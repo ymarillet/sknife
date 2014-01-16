@@ -1,0 +1,1 @@
+for more translations: http://datatables.net/plug-ins/i18n

@@ -1,0 +1,32 @@
+{
+    "sEmptyTable":     "Aucune donnée disponible dans le tableau",
+    "sInfo":           "Affichage de l'élément _START_ à _END_ sur _TOTAL_ éléments",
+    "sInfoEmpty":      "Affichage de l'élément 0 à 0 sur 0 élément",
+    "sInfoFiltered":   "(filtré de _MAX_ éléments au total)",
+    "sInfoPostFix":    "",
+    "sInfoThousands":    "",
+    "sLengthMenu":     "Afficher _MENU_ éléments",
+    "sLoadingRecords": "Chargement en cours...",
+    "sProcessing":     "Traitement en cours...",
+    "sSearch":         "Rechercher&nbsp;:",
+    "sZeroRecords":    "Aucun élément à afficher",
+    "oPaginate": {
+        "sFirst":      "Premier",
+        "sPrevious":   "Précédent",
+        "sNext":       "Suivant",
+        "sLast":       "Dernier"
+    },
+    "oAria": {
+        "sSortAscending":  ": activer pour trier la colonne par ordre croissant",
+        "sSortDescending": ": activer pour trier la colonne par ordre décroissant"
+    },
+    "oGroupedActions": {
+        "sCount": "Nombre d'éléments sélectionnés: _SELECTED_",
+        "sMenu": "Pour les éléments sélectionnés: _MENU_",
+        "sMenuSelectAction": "-- Sélectionnez une action",
+        "sButton": "Go!",
+        "sConfirmAction": "Êtes-vous sûr de vouloir exécuter l'action \"_ACTION_\" sur les _SELECTED_ éléments sélectionnés ?",
+        "sNoAction": "Vous n'avez pas sélectionné d'action",
+        "sNoItemSelected": "Aucun élément n'a été sélectionné"
+    }
+}

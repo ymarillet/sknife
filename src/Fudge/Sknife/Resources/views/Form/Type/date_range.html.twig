@@ -1,0 +1,26 @@
+{% block sknife_date_range_widget %}
+    {{ form_row(form.dateStart) }}
+    {{ form_row(form.dateEnd) }}
+{% endblock sknife_date_range_widget %}
+
+{% block sknife_date_range_stylesheet %}
+    {{ form_stylesheet(form) }}
+{% endblock sknife_date_range_stylesheet %}
+
+{% block sknife_date_range_javascript %}
+    {{ form_javascript(form) }}
+    <script type="text/javascript">
+        $(function(){
+            var $datetimepickerOptions = {
+                language: '{{ form.vars.language|default(app.request.locale|split('',2)|first) }}',
+                format: '{{ form.vars.format|default('dd/mm/yyyy') }}',
+                minView: 2,
+                maxView: 4,
+                autoclose: true,
+                todayHighlight: true
+            };
+            $('#{{ form.dateStart.vars.id }}').datetimepicker($datetimepickerOptions);
+            $('#{{ form.dateEnd.vars.id }}').datetimepicker($datetimepickerOptions);
+        });
+    </script>
+{% endblock sknife_date_range_javascript %}
