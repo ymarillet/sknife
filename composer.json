@@ -2,7 +2,7 @@
     "name": "ymarillet/sknife",
     "description": "Various PHP / Symfony2 / Twig / Doctine utils",
     "keywords": [ "ymarillet", "swiss", "knife", "sknife" ],
-    "license": "GPL-3+",
+    "license": "GPL-3.0+",
     "authors": [
         {
             "name": "Yohann Marillet",
