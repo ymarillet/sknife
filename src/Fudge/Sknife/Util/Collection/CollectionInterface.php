@@ -3,7 +3,7 @@ namespace Fudge\Sknife\Util\Collection;
 
 /**
  * Description
- * @author Yohann Marillet
+ * @author Yohann Marillet <yohann.marillet@gmail.com>
  * @since 25/09/13
  */
 interface CollectionInterface extends \ArrayAccess, \SeekableIterator, \Countable, \Serializable

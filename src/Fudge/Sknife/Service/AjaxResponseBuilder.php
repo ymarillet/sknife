@@ -6,7 +6,7 @@ use Symfony\Component\HttpFoundation\Session\Session;
 
 /**
  * AjaxResponseBuilder
- * @author Yohann Marillet
+ * @author Yohann Marillet <yohann.marillet@gmail.com>
  * @since 03/10/13
  */
 class AjaxResponseBuilder
@@ -32,7 +32,7 @@ class AjaxResponseBuilder
      * @param array $headers
      *
      * @return JsonResponse
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     public function get($data = null, $status = 200, $headers = array())
     {

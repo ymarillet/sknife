@@ -9,7 +9,7 @@ use Symfony\Component\Security\Core\Authorization\Voter\VoterInterface;
 /**
  * PermissionVoter votes if any attribute starts with a given prefix.
  *
- * @author Yohann Marillet
+ * @author Yohann Marillet <yohann.marillet@gmail.com>
  * @see RoleVoter
  */
 class PermissionVoter implements VoterInterface

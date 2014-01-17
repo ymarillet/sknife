@@ -6,7 +6,7 @@ use Fudge\Sknife\Exception\BusinessException;
 /**
  * Tainted functionnalities
  * Possibility to flag a class' properties as modified
- * @author Yohann Marillet
+ * @author Yohann Marillet <yohann.marillet@gmail.com>
  * @see Fudge\Sknife\Util\TaintedInterface
  */
 trait Tainted

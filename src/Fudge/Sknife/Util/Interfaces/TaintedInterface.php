@@ -5,7 +5,7 @@ namespace Fudge\Sknife\Util\Interfaces;
  * Tainted functionnalities
  * Possiblity to flag a class' properties as modified
  * Should be used in conjunction of the Tainted trait
- * @author Yohann Marillet
+ * @author Yohann Marillet <yohann.marillet@gmail.com>
  * @since 25/09/13
  */
 interface TaintedInterface

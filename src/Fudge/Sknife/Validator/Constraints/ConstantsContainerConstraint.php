@@ -3,7 +3,7 @@ namespace Fudge\Sknife\Validator\Constraints;
 
 /**
  * Description
- * @author Yohann Marillet
+ * @author Yohann Marillet <yohann.marillet@gmail.com>
  * @since 22/10/13
  */
 class ConstantsContainerConstraint

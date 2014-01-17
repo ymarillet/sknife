@@ -3,7 +3,7 @@ namespace Fudge\Sknife\Model;
 
 /**
  * Container for application wide and static sets of data (replaces a SQL table)
- * @author Yohann Marillet
+ * @author Yohann Marillet <yohann.marillet@gmail.com>
  * @since 11/09/13
  */
 interface ConstantsContainerInterface
@@ -11,7 +11,7 @@ interface ConstantsContainerInterface
     /**
      * Gets all available items
      * @return array
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     public static function getAll();
 
@@ -20,7 +20,7 @@ interface ConstantsContainerInterface
      * @param $item
      * @return mixed
      * @throws \InvalidArgumentException
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     public static function get($item);
 
@@ -28,7 +28,7 @@ interface ConstantsContainerInterface
      * Determines if the parameter is a valid item
      * @param $item
      * @return bool
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     public static function isValid($item);
 
@@ -36,7 +36,7 @@ interface ConstantsContainerInterface
      * Tests an item and throw an exception in case of error
      * @param $item
      * @throws \InvalidArgumentException
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     public static function test($item);
 }

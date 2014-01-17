@@ -5,14 +5,14 @@ use Doctrine\ORM\QueryBuilder;
 
 /**
  * HasTemporaryCreation
- * @author Yohann Marillet
+ * @author Yohann Marillet <yohann.marillet@gmail.com>
  * @since 26/10/13
  * @method QueryBuilder createQueryBuilder()
  */
 trait HasTemporaryEntityCreation
 {
     /**
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     public function cleanNotCreated()
     {
@@ -29,7 +29,7 @@ trait HasTemporaryEntityCreation
 
     /**
      * @return string
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     protected function getDatetimeAutoDeletePropertyName()
     {

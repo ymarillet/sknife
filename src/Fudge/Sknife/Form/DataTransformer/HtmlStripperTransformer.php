@@ -5,14 +5,14 @@ use Symfony\Component\Form\DataTransformerInterface;
 
 /**
  * HTML stripper converter
- * @author Yohann Marillet
+ * @author Yohann Marillet <yohann.marillet@gmail.com>
  * @since 28/11/13
  */
 class HtmlStripperTransformer implements DataTransformerInterface
 {
     /**
      * @inheritdoc
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     public function transform($value)
     {
@@ -41,7 +41,7 @@ class HtmlStripperTransformer implements DataTransformerInterface
 
     /**
      * @inheritdoc
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     public function reverseTransform($value)
     {

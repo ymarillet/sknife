@@ -8,7 +8,7 @@ use Fudge\Sknife\Util\Strings;
 /**
  * Abstract class to handle MYSQL's enum types
  * @since 09/09/2013
- * @author Yohann Marillet
+ * @author Yohann Marillet <yohann.marillet@gmail.com>
  * @see http://docs.doctrine-project.org/en/2.0.x/cookbook/mysql-enums.html
  */
 abstract class AbstractEnumType extends DoctrineType
@@ -54,7 +54,7 @@ abstract class AbstractEnumType extends DoctrineType
     /**
      * Gets all possible values (lazy loading) - Cannot do that in constructor since it's a final method in parent class
      * @return array
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     abstract public function getValues();
 }

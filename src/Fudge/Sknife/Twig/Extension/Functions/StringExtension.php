@@ -5,7 +5,7 @@ use Fudge\Sknife\Form\DataTransformer\HtmlToTextTransformer;
 
 /**
  * Various twig filters about strings
- * @author Yohann Marillet <yohann.marillet@gmail.com>
+ * @author Yohann Marillet <yohann.marillet@gmail.com> <yohann.marillet@gmail.com>
  * @since 13/10/13
  */
 class StringExtension extends \Twig_Extension
@@ -22,7 +22,7 @@ class StringExtension extends \Twig_Extension
      * @param array|string $value
      *
      * @return array|string
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     public function html2text($value)
     {

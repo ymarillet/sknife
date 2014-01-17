@@ -8,7 +8,7 @@ use O2K\Minisites\ApplicationBundle\Model\Language;
 
 /**
  * HasTranslations
- * @author Yohann Marillet
+ * @author Yohann Marillet <yohann.marillet@gmail.com>
  * @since 20/10/13
  */
 trait HasTranslations
@@ -27,7 +27,7 @@ trait HasTranslations
      * Get the translations
      *
      * @since 16/10/2013
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      * @return ArrayCollection
      */
     public function getTranslations()

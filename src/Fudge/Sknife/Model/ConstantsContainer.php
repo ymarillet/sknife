@@ -3,7 +3,7 @@ namespace Fudge\Sknife\Model;
 
 /**
  * Abstract class for application wide and static sets of data (replaces a SQL table)
- * @author Yohann Marillet
+ * @author Yohann Marillet <yohann.marillet@gmail.com>
  * @since 11/09/13
  */
 abstract class ConstantsContainer implements ConstantsContainerInterface

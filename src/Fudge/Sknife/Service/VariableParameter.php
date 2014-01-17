@@ -7,7 +7,7 @@ use Symfony\Component\Translation\Translator;
 
 /**
  * VariableParameter service
- * @author Yohann Marillet
+ * @author Yohann Marillet <yohann.marillet@gmail.com>
  * @since 20/11/13
  */
 class VariableParameter extends ContainerAware
@@ -23,7 +23,7 @@ class VariableParameter extends ContainerAware
      * @param array $options
      *
      * @return mixed
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     public function get($token, $callable, $options=[])
     {

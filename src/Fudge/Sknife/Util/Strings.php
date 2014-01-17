@@ -3,7 +3,7 @@ namespace Fudge\Sknife\Util;
 
 /**
  * Strings related util functions
- * @author Yohann Marillet
+ * @author Yohann Marillet <yohann.marillet@gmail.com>
  * @since 09/09/2013
  */
 class Strings
@@ -21,8 +21,10 @@ class Strings
      *
      * @param string $string
      * @param string $start_chars the first non alpha-numeric characters will be converted into this string
-     * @param bool   $lower       if true, the first letter won't be uppercased
-     * @author Yohann Marillet
+     * @param int $options
+     *
+     * @return string
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     public static function toCamel($string, $start_chars = '_', $options = self::OPT_CAMELIZE_NONE)
     {
@@ -49,9 +51,12 @@ class Strings
      * Alias for self::toCamel($string, self::OPT_CAMELIZE_LOWERCASE_FIRST)
      *
      * @see self::toCamel
+     *
      * @param string $string
      * @param string $start_chars
-     * @author Yohann Marillet
+     *
+     * @return string
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     public static function toLowerCamel($string, $start_chars = '_')
     {
@@ -63,6 +68,7 @@ class Strings
      *
      * @param  mixed  $value
      * @return string
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     public static function getClassOrType($value)
     {
@@ -74,12 +80,13 @@ class Strings
     /**
      * Slugify a string (i.e. converts any non authorized char into a specified char)
      *
-     * @param  string   $string    string to slugify
-     * @param  char     $slug_char replacement character
-     * @param  string   $regex     unauthorized character
-     * @param  callback $callback  callback function which is first called to pre-transform the string
+     * @param string $string string to slugify
+     * @param string $slug_char replacement character
+     * @param string $regex unauthorized character
+     * @param callable|string $callback callback function which is first called to pre-transform the string
+     *
      * @return string
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     public static function slugify($string, $slug_char = '-', $regex = '#[^a-z0-9]#i', $callback = 'strtolower')
     {
@@ -92,12 +99,13 @@ class Strings
     /**
      * Unslugify a string (i.e. converts a 'slugged' string into something more human-readable)
      *
-     * @param $string
-     * @param  string $slug_char
-     * @param  string $replace_slug_char
-     * @param  string $callback
+     * @param string $string
+     * @param string $slug_char
+     * @param string $replace_slug_char
+     * @param callback|string $callback
+     *
      * @return string
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     public static function unslugify($string, $slug_char = '-', $replace_slug_char=' ', $callback='ucfirst')
     {
@@ -110,11 +118,11 @@ class Strings
     }
 
     /**
-     * Get the standardized getter name for a fieldname in an object
+     * Get the standardized getter name for a field name in an object
      *
      * @param  string $field
      * @return string
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     public static function toGetter($field)
     {
@@ -122,11 +130,11 @@ class Strings
     }
 
     /**
-     * Get the standardized setter name for a fieldname in an object
+     * Get the standardized setter name for a field name in an object
      *
      * @param  string $field
      * @return string
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     public static function toSetter($field)
     {

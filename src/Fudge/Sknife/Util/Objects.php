@@ -3,7 +3,7 @@ namespace Fudge\Sknife\Util;
 
 /**
  * Objects related functions
- * @author Yohann Marillet
+ * @author Yohann Marillet <yohann.marillet@gmail.com>
  * @since 25/09/13
  */
 class Objects

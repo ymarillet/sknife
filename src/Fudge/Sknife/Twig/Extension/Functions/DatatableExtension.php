@@ -3,7 +3,7 @@ namespace Fudge\Sknife\Twig\Extension\Functions;
 
 /**
  * Datatable function for twig
- * @author Yohann Marillet
+ * @author Yohann Marillet <yohann.marillet@gmail.com>
  * @since 19/09/13
  */
 class DatatableExtension extends \Twig_Extension
@@ -58,7 +58,7 @@ class DatatableExtension extends \Twig_Extension
      * @param  array      $options
      * @return string
      * @throws \Exception
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     public function datatable($id, Array $options=array())
     {

@@ -10,7 +10,7 @@ use Fudge\Sknife\Model\Traits\HasTranslations;
 
 /**
  * Translatable service (using Gedmo's Doctrine behaviour)
- * @author Yohann Marillet
+ * @author Yohann Marillet <yohann.marillet@gmail.com>
  * @since 19/10/13
  */
 class Translatable
@@ -38,7 +38,7 @@ class Translatable
 
     /**
      * @return string
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     public function getDefaultLocale()
     {
@@ -47,7 +47,7 @@ class Translatable
 
     /**
      * @return TranslationRepository
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     public function getRepository()
     {
@@ -59,7 +59,7 @@ class Translatable
      * @param $entity
      * @param $language
      *
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     public function refreshEntity($entity, $language)
     {
@@ -100,7 +100,7 @@ class Translatable
      * @param Object|string $entity
      *
      * @return array
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     public function getTranslatableFields($entity) {
         return array_keys($this->getTranslatableProperties($entity)['fields']);
@@ -110,7 +110,7 @@ class Translatable
      * @param Object|string $param
      *
      * @return array
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     public function getTranslatableProperties($param) {
         if('string' == gettype($param)) {
@@ -127,7 +127,7 @@ class Translatable
      * Builds the translatable properties for a defined class
      * @param $className
      *
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     protected function buildTranslatableProperties($className) {
         if (!isset(static::$translatableProperties[$className])) {

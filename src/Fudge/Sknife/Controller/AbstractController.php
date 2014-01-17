@@ -15,7 +15,7 @@ use Symfony\Component\Routing\Router;
 
 /**
  * Extends the basic SF2's controller with shortcuts (for type hinting and autocompletion) and general purpose functions
- * @author Yohann Marillet
+ * @author Yohann Marillet <yohann.marillet@gmail.com>
  * @since 20/09/13
  */
 abstract class AbstractController extends Controller
@@ -24,7 +24,7 @@ abstract class AbstractController extends Controller
      * Shortcut to return the session service.
      *
      * @return Session
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     public function getSession()
     {
@@ -36,7 +36,7 @@ abstract class AbstractController extends Controller
      *
      * @param  string|null   $name
      * @return EntityManager
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     public function getEm($name = null)
     {
@@ -49,7 +49,7 @@ abstract class AbstractController extends Controller
      * @param $type
      * @param $message
      * @return mixed
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     public function addFlash($type, $message)
     {
@@ -59,7 +59,7 @@ abstract class AbstractController extends Controller
     /**
      * Shortcut to return the datatable service
      * @return Datatable
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     public function getDatatable()
     {
@@ -69,7 +69,7 @@ abstract class AbstractController extends Controller
     /**
      * Shortcut to return the translator service
      * @return Translator
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     public function getTranslator()
     {
@@ -87,7 +87,7 @@ abstract class AbstractController extends Controller
     /**
      * Shortcut to return the router service
      * @return Router
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     public function getRouter()
     {
@@ -98,7 +98,7 @@ abstract class AbstractController extends Controller
      * Saves an entity state in the session bag
      * @param string $key    key of the variable in the session bag
      * @param mixed  $entity
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     protected function saveEntity($key, $entity)
     {
@@ -121,7 +121,7 @@ abstract class AbstractController extends Controller
      * Must have a performance impact if used many times
      * @param  string $key key of the variable in the session bag
      * @return mixed
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     protected function restoreEntity($key)
     {
@@ -145,7 +145,7 @@ abstract class AbstractController extends Controller
      * @param array $headers
      *
      * @return JsonResponse
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     public function createAjaxResponse($data = null, $status = null, $headers = array())
     {
@@ -167,7 +167,7 @@ abstract class AbstractController extends Controller
     /**
      * Shortcut to return the logger service
      * @return Logger
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     public function getLogger()
     {
@@ -177,7 +177,7 @@ abstract class AbstractController extends Controller
     /**
      * Shortcut to the Sknife's translatable service
      * @return Translatable
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     public function getTranslatable()
     {
@@ -188,7 +188,7 @@ abstract class AbstractController extends Controller
      * @param int $previousSelectedCount
      * @param int $newSelectedCount
      *
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     protected function checkSelectedDifferences($previousSelectedCount, $newSelectedCount)
     {
@@ -206,7 +206,7 @@ abstract class AbstractController extends Controller
      * @see SelectableRepositoryInterface::refreshSelected
      *
      * @return int
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     protected function refreshSelected(SelectableRepositoryInterface $repository, $token)
     {

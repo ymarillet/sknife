@@ -11,7 +11,7 @@ use Symfony\Component\Validator\Validation;
 
 /**
  * General handling of datatables requests
- * @author Yohann Marillet
+ * @author Yohann Marillet <yohann.marillet@gmail.com>
  * @since 23/09/13
  */
 class Datatable
@@ -43,7 +43,7 @@ class Datatable
      * @param  array      $definitions column definitions (assigning text labels to request's column IDs)
      * @return array
      * @throws \Exception
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     public function handleRequest(array $definitions)
     {
@@ -137,7 +137,7 @@ class Datatable
      * @param  int   $nbTotalRecords
      * @param  int   $nbTotalDisplayRecords
      * @return array
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     public function formatResponse($data, $nbTotalRecords, $nbTotalDisplayRecords, $nbSelected=null)
     {
@@ -175,7 +175,7 @@ class Datatable
     /**
      * Adds a success message in the flashbag to indicate how many elements are selected
      * @param mixed $tableId
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     public function addCountSelectedFlashMessage($tableId)
     {
@@ -189,7 +189,7 @@ class Datatable
      * Gets the selected items identifiers for a table
      * @param  mixed $tableId
      * @return array list of the ids selected
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     public function getSelected($tableId)
     {
@@ -200,7 +200,7 @@ class Datatable
      * Gets the selected items count for a table
      * @param  mixed $tableId
      * @return int
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     public function countSelected($tableId)
     {
@@ -214,7 +214,7 @@ class Datatable
      * @param  mixed $tableId
      * @param  mixed $val
      * @return bool
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     public function isSelected($tableId, $val)
     {
@@ -226,7 +226,7 @@ class Datatable
      * @param  mixed       $tableId
      * @param  array|mixed $items
      * @return array       the list of selected elements
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     public function addSelected($tableId, $items)
     {
@@ -246,7 +246,7 @@ class Datatable
      * @param  mixed       $tableId
      * @param  array|mixed $items
      * @return array       the list of selected elements
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     public function removeSelected($tableId, $items)
     {
@@ -265,7 +265,7 @@ class Datatable
     /**
      * Unselect all the elements
      * @var mixed $tableId
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     public function clearSelected($tableId)
     {

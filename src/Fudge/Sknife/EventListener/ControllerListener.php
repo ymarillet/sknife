@@ -10,7 +10,7 @@ use Symfony\Component\Security\Core\SecurityContext;
 
 /**
  * ControllerListener
- * @author Yohann Marillet
+ * @author Yohann Marillet <yohann.marillet@gmail.com>
  * @since 12/12/13
  * @see http://php-and-symfony.matthiasnoback.nl/2012/12/prevent-controller-execution-with-annotations-and-return-a-custom-response/
  */

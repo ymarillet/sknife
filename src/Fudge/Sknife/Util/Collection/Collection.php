@@ -13,7 +13,7 @@ use Fudge\Sknife\Util\Interfaces\TaintedInterface;
 
 /**
  * Collection
- * @author Yohann Marillet
+ * @author Yohann Marillet <yohann.marillet@gmail.com>
  * @since 25/09/13
  */
 abstract class Collection extends \ArrayIterator implements CollectionInterface
@@ -107,7 +107,7 @@ abstract class Collection extends \ArrayIterator implements CollectionInterface
 
     /**
      * @return $this
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     public function resetTainted()
     {
@@ -122,7 +122,7 @@ abstract class Collection extends \ArrayIterator implements CollectionInterface
 
     /**
      * @return bool
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     public function hasTainted()
     {
@@ -142,7 +142,7 @@ abstract class Collection extends \ArrayIterator implements CollectionInterface
 
     /**
      * @return CollectionInterface|mixed
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     public function deepCopy()
     {
@@ -151,7 +151,7 @@ abstract class Collection extends \ArrayIterator implements CollectionInterface
 
     /**
      * @return array
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     public function getKeys()
     {
@@ -169,7 +169,7 @@ abstract class Collection extends \ArrayIterator implements CollectionInterface
      *
      * @return mixed
      * @throws \Fudge\Sknife\Exception\KeyableException
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     public function getKey($value)
     {
@@ -191,7 +191,7 @@ abstract class Collection extends \ArrayIterator implements CollectionInterface
      *
      * @throws TypeExpectedException
      * @throws BusinessException
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     public function offsetSet($index, $newval)
     {
@@ -231,7 +231,7 @@ abstract class Collection extends \ArrayIterator implements CollectionInterface
     /**
      * @param mixed|string $index
      *
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     public function offsetUnset($index)
     {
@@ -244,7 +244,7 @@ abstract class Collection extends \ArrayIterator implements CollectionInterface
      *
      * @return mixed
      * @throws CollectionException
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     public function offsetGet($value)
     {
@@ -262,7 +262,7 @@ abstract class Collection extends \ArrayIterator implements CollectionInterface
     /**
      * @param mixed $value
      *
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     public function append($value)
     {
@@ -271,7 +271,7 @@ abstract class Collection extends \ArrayIterator implements CollectionInterface
 
     /**
      * @return string
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     protected function getExceptionClass()
     {

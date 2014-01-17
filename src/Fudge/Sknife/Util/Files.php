@@ -3,7 +3,7 @@ namespace Fudge\Sknife\Util;
 
 /**
  * Files related functions
- * @author Yohann Marillet
+ * @author Yohann Marillet <yohann.marillet@gmail.com>
  * @since 11/10/13
  */
 class Files
@@ -14,7 +14,7 @@ class Files
      * @param  string $string      the string to clean
      * @param  string $replacement replacement character for unauthorized ones
      * @return string
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      * @see http://stackoverflow.com/questions/2668854/sanitizing-strings-to-make-them-url-and-filename-safe
      */
     public static function sanitize($string, $replacement = '-')
@@ -35,10 +35,13 @@ class Files
 
     /**
      * Appends a string to the filename (before the extension) if the file exists
-     * @param $filePath
-     * @param  string $append
-     * @return mixed
-     * @author Yohann Marillet
+     *
+     * @param string $path
+     * @param string $name
+     * @param string $append
+     *
+     * @return string
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     public static function appendIfFileExists($path, $name, $append='-')
     {
@@ -65,7 +68,7 @@ class Files
      * Recursive Rmdir
      * @param $dir
      * @see http://www.commentcamarche.net/faq/12255-warning-rmdir-directory-not-empty
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     public static function rmdir_recursive($dir)
     {

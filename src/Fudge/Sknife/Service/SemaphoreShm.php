@@ -3,7 +3,7 @@ namespace Fudge\Sknife\Service;
 
 /**
  * Class SemaphoreShm
- * @author Yohann Marillet
+ * @author Yohann Marillet <yohann.marillet@gmail.com>
  */
 class SemaphoreShm
 {
@@ -37,7 +37,7 @@ class SemaphoreShm
 
     /**
      * Gets the value of the semaphore
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     public function get($key=1)
     {
@@ -51,7 +51,7 @@ class SemaphoreShm
 
     /**
      * Returns if the semaphore is present in memory
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     public function has($key=1)
     {
@@ -61,7 +61,7 @@ class SemaphoreShm
     }
 
     /**
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     public function put($key=1, $value=true)
     {
@@ -78,7 +78,7 @@ class SemaphoreShm
      *
      * @throws \Exception
      * @return $this
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     public function delete($key=1)
     {
@@ -97,7 +97,7 @@ class SemaphoreShm
 
     /**
      * Destroy the shared memory
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     public function remove()
     {

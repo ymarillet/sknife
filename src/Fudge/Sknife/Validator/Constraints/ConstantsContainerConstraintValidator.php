@@ -6,14 +6,14 @@ use Symfony\Component\Validator\ConstraintValidator;
 
 /**
  * ConstantsContainerValidator
- * @author Yohann Marillet
+ * @author Yohann Marillet <yohann.marillet@gmail.com>
  * @since 22/10/13
  */
 abstract class ConstantsContainerConstraintValidator extends ConstraintValidator
 {
     /**
      * @inheritdoc
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     public function validate($value, Constraint $constraint)
     {

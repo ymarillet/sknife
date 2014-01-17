@@ -6,7 +6,7 @@ use Symfony\Component\Validator\ExecutionContextInterface;
 
 /**
  * DateRange
- * @author Yohann Marillet
+ * @author Yohann Marillet <yohann.marillet@gmail.com>
  * @since 21/11/13
  * @Assert\Callback(methods={"checkDates"}, groups={"checkDates"})
  * @Assert\Callback(methods={"endDateMustBeTodayOrBefore"}, groups={"endDateMustBeTodayOrBefore"})
@@ -234,7 +234,7 @@ class DateRange
     /**
      * @param ExecutionContextInterface $context
      *
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     public function checkDates(ExecutionContextInterface $context)
     {
@@ -248,7 +248,7 @@ class DateRange
     /**
      * @param ExecutionContextInterface $context
      *
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     public function endDateMustBeTodayOrBefore(ExecutionContextInterface $context)
     {
@@ -265,7 +265,7 @@ class DateRange
     /**
      * @param ExecutionContextInterface $context
      *
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     public function startDateMustBeTodayOrAfter(ExecutionContextInterface $context)
     {
@@ -281,7 +281,7 @@ class DateRange
     /**
      * @param ExecutionContextInterface $context
      *
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     public function emptyDates(ExecutionContextInterface $context)
     {

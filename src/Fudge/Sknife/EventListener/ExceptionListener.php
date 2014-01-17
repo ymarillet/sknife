@@ -7,7 +7,7 @@ use Symfony\Component\HttpKernel\HttpKernelInterface;
 
 /**
  * ExceptionListener
- * @author Yohann Marillet
+ * @author Yohann Marillet <yohann.marillet@gmail.com>
  * @since 13/12/13
  */
 class ExceptionListener

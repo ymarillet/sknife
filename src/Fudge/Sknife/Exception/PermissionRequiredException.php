@@ -3,7 +3,7 @@ namespace Fudge\Sknife\Exception;
 
 /**
  * PermissionRequiredException
- * @author Yohann Marillet
+ * @author Yohann Marillet <yohann.marillet@gmail.com>
  * @since 12/12/13
  */
 class PermissionRequiredException extends BusinessException

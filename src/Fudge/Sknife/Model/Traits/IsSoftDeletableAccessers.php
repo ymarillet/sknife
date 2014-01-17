@@ -3,7 +3,7 @@ namespace Fudge\Sknife\Model\Traits;
 
 /**
  * Description
- * @author Yohann Marillet
+ * @author Yohann Marillet <yohann.marillet@gmail.com>
  * @since 28/10/13
  */
 trait IsSoftDeletableAccessers
@@ -12,7 +12,7 @@ trait IsSoftDeletableAccessers
      * @param bool $isDeletable
      *
      * @return $this
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     public function setIsDeleted($isDeletable)
     {
@@ -23,7 +23,7 @@ trait IsSoftDeletableAccessers
 
     /**
      * @return bool
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     public function getIsDeleted()
     {
@@ -32,7 +32,7 @@ trait IsSoftDeletableAccessers
 
     /**
      * @return bool
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     public function isSoftDeletable()
     {

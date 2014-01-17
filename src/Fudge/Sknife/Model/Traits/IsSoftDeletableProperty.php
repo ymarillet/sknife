@@ -3,7 +3,7 @@ namespace Fudge\Sknife\Model\Traits;
 
 /**
  * Description
- * @author Yohann Marillet
+ * @author Yohann Marillet <yohann.marillet@gmail.com>
  * @since 28/10/13
  */
 trait IsSoftDeletableProperty

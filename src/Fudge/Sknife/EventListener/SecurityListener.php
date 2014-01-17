@@ -7,7 +7,7 @@ use Symfony\Component\HttpFoundation\Session\Session;
 
 /**
  * SecurityListener
- * @author Yohann Marillet
+ * @author Yohann Marillet <yohann.marillet@gmail.com>
  * @author Matt Drollette <matt@drollette.com>
  * @see https://matt.drollette.com/2012/07/user-specific-timezones-with-symfony2-and-twig-extensions/
  * @since 11/10/13

@@ -5,14 +5,14 @@ use Symfony\Component\Form\DataTransformerInterface;
 
 /**
  * HTML to text converter
- * @author Yohann Marillet
+ * @author Yohann Marillet <yohann.marillet@gmail.com>
  * @since 28/11/13
  */
 class HtmlToTextTransformer implements DataTransformerInterface
 {
     /**
      * @inheritdoc
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     public function transform($value)
     {
@@ -30,7 +30,7 @@ class HtmlToTextTransformer implements DataTransformerInterface
 
     /**
      * @inheritdoc
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     public function reverseTransform($value)
     {

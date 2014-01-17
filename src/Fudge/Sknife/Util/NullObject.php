@@ -3,7 +3,7 @@ namespace Fudge\Sknife\Util;
 
 /**
  * NullObject
- * @author Yohann Marillet
+ * @author Yohann Marillet <yohann.marillet@gmail.com>
  * @since 25/09/13
  */
 class NullObject implements \ArrayAccess, \Iterator, \Countable

@@ -11,7 +11,7 @@ use Fudge\Sknife\Util\Strings;
 
 /**
  * Common Doctrine repositories functions
- * @author Yohann Marillet
+ * @author Yohann Marillet <yohann.marillet@gmail.com>
  * @since 23/09/13
  */
 abstract class AbstractRepository extends EntityRepository
@@ -21,7 +21,7 @@ abstract class AbstractRepository extends EntityRepository
      * @param  QueryBuilder $qb
      * @param  array        $options
      * @return QueryBuilder
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     protected function addCommonFilters(QueryBuilder $qb, Array $options=array())
     {
@@ -58,7 +58,7 @@ abstract class AbstractRepository extends EntityRepository
      * Transform common filter options (limit, offset, order) for a native query
      * @param  array $options
      * @return array
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     protected function getNativeCommonFilters(Array $options=[])
     {
@@ -96,7 +96,7 @@ abstract class AbstractRepository extends EntityRepository
      * @param  QueryBuilder $qb
      * @param  array        $options filters to apply - only following keys are supported: search, globalSearch, globalSearchColumns, _prefix
      * @throws \Exception
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     protected function addSearchFilters($qb, $options=[])
     {
@@ -182,7 +182,7 @@ abstract class AbstractRepository extends EntityRepository
      * @param array $options filters to apply - only following keys are supported: search, globalSearch, globalSearchColumns
      * @retuen array
      * @throws \Exception
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     protected function getNativeSearchFilters($options=[])
     {
@@ -256,7 +256,7 @@ abstract class AbstractRepository extends EntityRepository
      * @param $alias
      * @param  QueryBuilder $qb
      * @return string
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     protected function replaceByJoinAlias($alias, QueryBuilder $qb)
     {
@@ -280,7 +280,7 @@ abstract class AbstractRepository extends EntityRepository
      * @param  array                     $filters
      * @throws \InvalidArgumentException
      * @return array
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     public function slice(Collection $collection, array $filters)
     {
@@ -306,7 +306,7 @@ abstract class AbstractRepository extends EntityRepository
      * @param string $separator
      *
      * @return mixed
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     protected function getValueFromDQLField($entity, $field, $separator='.')
     {
@@ -325,7 +325,7 @@ abstract class AbstractRepository extends EntityRepository
      * @param  Collection $collection
      * @param  array      $filters
      * @return Collection
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     public function filter(Collection $collection, array $filters)
     {
@@ -393,7 +393,7 @@ abstract class AbstractRepository extends EntityRepository
      * @param  Collection $collection
      * @param  array      $filters
      * @return Collection
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      * @deprecated this function is very slow on large sets of data
      */
     public function sort(Collection $collection, array $filters)
@@ -435,7 +435,7 @@ abstract class AbstractRepository extends EntityRepository
      * @param Collection $collection
      * @param $index
      * @return ArrayCollection
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     public static function reIndex(Collection $collection, $index)
     {
@@ -459,7 +459,7 @@ abstract class AbstractRepository extends EntityRepository
     /**
      * Deletes an entity or a list of entities
      * @param mixed $list list of entities / entity IDs
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     public function delete($list)
     {
@@ -480,7 +480,7 @@ abstract class AbstractRepository extends EntityRepository
     }
 
     /**
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     public function preRemove($entity)
     {
@@ -496,7 +496,7 @@ abstract class AbstractRepository extends EntityRepository
      * @param $identifier
      *
      * @return string
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     protected function retrieveEntityForDelete($className, $identifier)
     {
@@ -507,7 +507,7 @@ abstract class AbstractRepository extends EntityRepository
      * Soft deletes a record (implementing IsSoftDeletable)
      * @param $list
      * @return array ID list of actual soft deleted records
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     public function softDelete($list)
     {
@@ -560,7 +560,7 @@ abstract class AbstractRepository extends EntityRepository
     /**
      * @param  array $list
      * @return array
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     public function findByIdentifiersArray(Array $list)
     {

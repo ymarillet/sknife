@@ -9,7 +9,7 @@ use Doctrine\DBAL\Types\ConversionException;
 /**
  * Handles datetime timezone conversion to UTC in database
  * @since 09/09/2013
- * @author Yohann Marillet
+ * @author Yohann Marillet <yohann.marillet@gmail.com>
  * @see http://docs.doctrine-project.org/en/2.0.x/cookbook/working-with-datetime.html
  */
 class UTCDateTimeType extends DateTimeType

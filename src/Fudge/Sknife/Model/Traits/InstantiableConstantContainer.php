@@ -6,7 +6,7 @@ use Fudge\Sknife\Util\Collection\Collection;
 
 /**
  * InstantiableConstantContainer
- * @author Yohann Marillet
+ * @author Yohann Marillet <yohann.marillet@gmail.com>
  * @since 25/09/13
  *
  * @method bool test() test(mixed $item)
@@ -43,7 +43,7 @@ trait InstantiableConstantContainer
     /**
      * @throws BusinessException
      * @return string
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     public static function getCollectionClass()
     {

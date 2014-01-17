@@ -3,7 +3,7 @@ namespace Fudge\Sknife\ORM\Doctrine\Repository\Interfaces;
 
 /**
  * SelectableRepositoryInterface
- * @author Yohann Marillet
+ * @author Yohann Marillet <yohann.marillet@gmail.com>
  * @since 24/10/13
  */
 interface SelectableRepositoryInterface
@@ -13,7 +13,7 @@ interface SelectableRepositoryInterface
      * @param $identifiersList
      *
      * @return array
-     * @author Yohann Marillet
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     public function refreshSelected(Array $identifiersList);
 }
