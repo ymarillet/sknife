@@ -29,7 +29,7 @@ class Strings
     public static function toCamel($string, $start_chars = '_', $options = self::OPT_CAMELIZE_NONE)
     {
         $s = preg_replace('#[^a-z0-9]#i', ' ', $string);
-        $s = ucwords(strtolower($s));
+        $s = ucwords(mb_strtolower($s));
         $nb_first_chars = strspn($s, ' ');
         $s = trim($s);
         if ($options && self::OPT_CAMELIZE_LOWERCASE_FIRST) {
@@ -88,7 +88,7 @@ class Strings
      * @return string
      * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
-    public static function slugify($string, $slug_char = '-', $regex = '#[^a-z0-9]#i', $callback = 'strtolower')
+    public static function slugify($string, $slug_char = '-', $regex = '#[^a-z0-9]#i', $callback = 'mb_strtolower')
     {
         $return = $callback($string);
         $return = preg_replace($regex, $slug_char, $return);

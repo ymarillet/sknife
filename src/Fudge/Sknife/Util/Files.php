@@ -1,6 +1,8 @@
 <?php
 namespace Fudge\Sknife\Util;
 
+use Fudge\Sknife\Exception\BusinessException;
+
 /**
  * Files related functions
  * @author Yohann Marillet <yohann.marillet@gmail.com>
@@ -95,5 +97,98 @@ class Files
             // we deleted everything inside the directory, we can now delete it safely
             rmdir($dir);
         }
+    }
+
+    /**
+     * Checks whether a file exists or not, throws an exception if not
+     *
+     * @param string $filepath
+     * @throws BusinessException
+     * @return bool
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
+     */
+    public static function requireFileExists($filepath)
+    {
+        if (!file_exists($filepath)) {
+            throw new BusinessException('File does not exist: "' . $filepath . '"');
+        }
+
+        return true;
+    }
+
+    /**
+     * Checks whether a file is writable or not, throws an exception if not
+     *
+     * @param string $filepath
+     * @throws BusinessException
+     * @return bool
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
+     */
+    public static function requireWritePermissions($filepath)
+    {
+        if (!self::hasWritePermissions($filepath)) {
+            throw new BusinessException('Cannot write to "' . $filepath . '". Please check the filesystem permissions.');
+        }
+
+        return true;
+    }
+
+    /**
+     * Checks whether a file is writable or not
+     *
+     * @param string $filepath
+     * @return bool
+     * @author Yohann Marillet <yohann.marillet@gmail.com>
+     */
+    public static function hasWritePermissions($filepath) {
+        $return = false;
+        $dest_dir = dirname($filepath);
+        if (!is_dir($dest_dir)
+                || !is_writable($dest_dir)
+                || (file_exists($filepath) && !is_writable($filepath))
+        ) {
+            $return = true;
+        }
+
+        return $return;
+    }
+
+    /**
+     * Transforms an array of lines into a CSV file
+     * Options available:
+     * - delimiter: delimiter for the CSV file (default ',')
+     * - enclosure: enclosure for the CSV file (default '"')
+     * - prefix: prefix for the temp file name (default '_')
+     * - folder: dest folder for the temp generated file (default system temp folder)
+     *
+     * @param array $lines 2-dimensional array
+     * @param array $options
+     * @return string the path to the generated file
+     */
+    public static function toCSV($lines,$options=array()) {
+        if(!isset($options['delimiter'])) {
+            $options['delimiter']=',';
+        }
+
+        if(!isset($options['enclosure'])) {
+            $options['enclosure']='"';
+        }
+
+        if(!isset($options['prefix'])) {
+            $options['prefix']='_';
+        }
+
+        if(!isset($options['folder'])) {
+            $options['folder']=null;
+        }
+
+        $filename = tempnam($options['folder'], $options['prefix']);
+        $fp = fopen($filename, 'w+');
+        foreach($lines as $line) {
+            fputcsv($fp, $line, $options['delimiter'], $options['enclosure']);
+        }
+        fclose($fp);
+
+        return $filename;
     }
 }
