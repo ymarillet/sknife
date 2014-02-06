@@ -141,13 +141,13 @@ class Files
      * @author Yohann Marillet <yohann.marillet@gmail.com>
      */
     public static function hasWritePermissions($filepath) {
-        $return = false;
+        $return = true;
         $dest_dir = dirname($filepath);
         if (!is_dir($dest_dir)
                 || !is_writable($dest_dir)
                 || (file_exists($filepath) && !is_writable($filepath))
         ) {
-            $return = true;
+            $return = false;
         }
 
         return $return;
